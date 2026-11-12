@@ -5,6 +5,6 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react()],
   server: {
-    allowedHosts: ["tooth-overall-rocks-quit.trycloudflare.com"],
+    allowedHosts: ["medal-released-rankings-babies.trycloudflare.com"],
   },
 });
