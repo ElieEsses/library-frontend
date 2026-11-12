@@ -1,0 +1,203 @@
+
+.book-details-page {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  color: #777;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--color-primary);
+}
+
+.book-detail-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.detail-cover {
+  width: 220px;
+  max-width: 35%;
+  height: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  transition: box-shadow 0.25s ease, outline-color 0.25s ease,
+              transform 0.25s ease;
+}
+
+.detail-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.detail-info h1 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 4px 0 10px;
+}
+
+.detail-info h2 {
+  font-size: 17px;
+  font-weight: 400;
+  color: #777;
+  margin: 0 0 16px;
+}
+
+.detail-info > p {
+  font-size: 14px;
+  color: #888;
+}
+
+.reading-section {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.reading-section label,
+.progress-header {
+  font-size: 13px;
+  color: #777;
+}
+.status-select {
+  position: relative;
+  width: 170px;
+}
+
+.status-select select {
+  appearance: none;
+  width: 100%;
+  padding: 9px 36px 9px 12px;
+  border: 1px solid #dedede;
+  border-radius: 7px;
+  background: white;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.status-select svg {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #777;
+}
+
+.reading-progress {
+  width: 100%;
+  margin-top: 14px;
+}
+
+.progress-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.pages-read-input {
+  width: 60px;
+  padding: 5px 8px;
+  box-sizing: border-box;
+  text-align: right;
+  font: inherit;
+  border: 1px solid #dedede;
+  border-radius: 6px;
+  color: #333;
+}
+
+.pages-read-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.pages-read-input:disabled {
+  background: #f7f7f7;
+  color: #888;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.reading-progress progress {
+  display: block;
+  width: 100%;
+  height: 18px;
+  accent-color: var(--color-primary);
+}
+
+.reading-progress.finished progress {
+  accent-color: #3c9663;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+
+
+@media (max-width: 600px) {
+  .book-detail-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .detail-cover {
+    width: 180px;
+    max-width: 100%;
+  }
+
+  .detail-info {
+    width: 100%;
+  }
+
+  .book-details-page {
+    padding: 24px 20px;
+  }
+
+  .reading-progress {
+    padding-right: 12px;
+    box-sizing: border-box;
+  }
+
+  .pages-read-input {
+    width: 60px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .pages-read-input,
+  .status-select select {
+    font-size: 16px;
+  }
+
+  .status-select select {
+    color: #333;
+    -webkit-text-fill-color: #333;
+  }
+}
+
