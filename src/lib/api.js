@@ -3,7 +3,6 @@ import { supabase } from "./supabase";
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export async function apiFetch(endpoint, options = {}) {
-  console.log(API_BASE_URL);
   const {
     data: { session },
   } = await supabase.auth.getSession();
